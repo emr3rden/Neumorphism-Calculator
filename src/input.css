@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .buttons {
+        @apply rounded-2xl bg-primary-color shadow-[3px_3px_6px_rgb(36,37,51),-3px_-3px_6px_rgb(48,51,69)] active:shadow-[inset_3px_3px_6px_rgb(36,37,51),inset_-3px_-3px_6px_rgb(48,51,69)] flex items-center justify-center hover:cursor-pointer;
+    }
+}
+
+@layer utilities {
+    .no-scrollbar {
+        /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+      /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+}
